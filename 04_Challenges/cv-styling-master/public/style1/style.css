@@ -1,16 +1,16 @@
 
 
 body {
-    background-color: black;
-    text-align: center;
-   
+margin: 0 10rem 0 10rem;   
+background-color: white;
+
 }
 header {
     background-color: gray;
-    margin: auto;
+    padding: 0 5rem 0 5rem;
     width: 66rem;
     height: 10rem;
-    
+    margin-left:13rem;
 }
 
 hgroup {
@@ -24,10 +24,7 @@ div.skill {
     padding: 7px;
     margin: 10px;
 }
-.contact{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-}
+
 .contact-type {
     color: white;
     background-color: red;
@@ -43,12 +40,14 @@ dl.contact{
     margin-bottom: 0%;
     text-decoration: none;
 }
-.contacts {
+#contact {
     background-color: black;
     position: absolute;
-    top: 2rem;
-    right: 19rem;
-    width: 33rem
+    margin-top: -15rem;
+    margin-right: -20rem;
+    padding-right: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 
 }
 
@@ -179,13 +178,13 @@ h4 {
 
 
 
-@media all and (max-width:799){
+@media only screen and (max-width: 890px) {
 
 
     body {
         background-color: black;
         text-align: center;
-       
+        
     }
     header {
         background-color: gray;
@@ -241,8 +240,6 @@ h4 {
         grid-template-columns: auto ;
         grid-template-rows: auto ;
         width: 25rem;
-        padding: 80px;
-        gap: 2px 2px;
         margin: auto;
         text-align: left;
     
