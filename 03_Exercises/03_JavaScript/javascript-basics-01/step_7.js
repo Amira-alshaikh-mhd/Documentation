@@ -1,6 +1,7 @@
-var shoe = prompt('Enter your shoe size');
-var birth = prompt('Enter your birth year');
-function mutible(){
+document.getElementById('validate').onclick = function(){
+var shoe = document.getElementById('shoe_size').value;
+var birth = document.getElementById('year').value;
+
  var first = shoe*2;
  var second = first+5;
  var third = second*50;
@@ -8,7 +9,8 @@ function mutible(){
  var fifth = fourth+1766;
 
  
- return fifth;
-}
+ 
 
-alert(mutible());
+
+alert(fifth);
+}
