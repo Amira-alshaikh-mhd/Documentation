@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8">
   <title>Step 3</title>
+  <script src="step_3.js"></script>
 </head>
 <body>
   <form>
-    <label for="name">Your name  : </label><input type="text" name="name" value="" id="name" />
+    <label for="name">Your name  : </label><input onchange="myfunction(this.value)" type="text" name="name" value="" id="name" />
   </form>
-  <div id="value"></div>
-  <script src="step_3.js"></script>
+
+  <div id="test" style=" width: 200PX;height:60px;border: 2px solid;" ></div>
 </body>
 </html>

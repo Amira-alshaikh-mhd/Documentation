@@ -1,8 +1,9 @@
-const text = document.querySelector('input');
-const value = document.getElementById('value');
 
-text.addEventListener('input', updateValue);
 
-function updateValue(a){
-    value.textContant=a.target.value;
-}
+
+function myfunction(text)
+    {
+        
+        document.getElementById("test").innerHTML=text;
+        
+    }
