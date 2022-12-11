@@ -44,6 +44,30 @@ FROM employees;
   15-SELECT employees.Name FROM companies, employees WHERE employees.Company = companies.Name AND companies.date < 2000;
   
   16-SELECT companies.Name FROM employees, companies WHERE employees.Company = companies.Name AND employees.Role='Graphic Designer';
+  
+  18-SELECT Name,MAX(Points) 
+    FROM students;
+    
+  19-  SELECT AVG(Points)
+    FROM students;
+    
+    
+    
+    
+  20- SELECT COUNT(Name)
+    FROM students
+    WHERE Points='500';
+    
+    
+  21-SELECT * FROM students
+   WHERE Name LIKE '%s%';
+   
+   
+  22-SELECT (Name) FROM students
+   ORDER BY Points DESC; 
+   
+   
+   
 
 
        
