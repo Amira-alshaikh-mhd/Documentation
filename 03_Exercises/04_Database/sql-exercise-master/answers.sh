@@ -27,6 +27,25 @@ Graduation TEXT
     WHERE Name='Layal';
     
   13- DELETE FROM students WHERE Name='Layal';
+  
+  
+  14- CREATE TABLE Employee1 (
+	ID	INTEGER NOT NULL,
+	EmployeeName	TEXT NOT NULL UNIQUE,
+	CompanyoftheEemployee	TEXT,
+	CompanyDate	TEXT
+     );
+     
+     INSERT INTO Employee1(ID, EmployeeName, CompanyoftheEemployee)
+SELECT ID, Name, Company
+FROM employees;
+
+
+  15-SELECT employees.Name FROM companies, employees WHERE employees.Company = companies.Name AND companies.date < 2000;
+  
+  16-SELECT companies.Name FROM employees, companies WHERE employees.Company = companies.Name AND employees.Role='Graphic Designer';
+
+
        
 
 
