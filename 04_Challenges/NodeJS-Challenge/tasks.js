@@ -114,7 +114,7 @@ function quit() {
 /*  Gives the list of the commands*/
 
 function help() {
-  console.log('..........\n' + 'list of commands:\n' + 'hello\n' + 'quit\n' + 'exit\n' + 'help\n' + '..........')
+  console.log('..........\n' + 'list of commands:\n' + 'hello\n' +  'hello ..(name)..\n' + 'quit\n' + 'exit\n' + 'help\n' + '..........')
 }
 
 
