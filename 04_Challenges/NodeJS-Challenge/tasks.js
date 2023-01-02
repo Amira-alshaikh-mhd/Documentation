@@ -38,7 +38,7 @@ function onDataReceived(text) {
   text = text.replace("\n", "");
   let y = text.split(" ")[0];
   let x = text.split(" ")[1];
-  
+
 
 
   if (text === 'quit') {
@@ -51,11 +51,17 @@ function onDataReceived(text) {
     help();
   }
   else if (y === "hello") {
-    hello(x)
+
+    if (text.split(" ")[1] === undefined) {
+      hello1()
+
+    } else {
+
+      hello(x)
+
+    }
+
   }
-
-  
-
 
   else {
     unknownCommand(text);
@@ -83,7 +89,7 @@ function unknownCommand(c) {
 //  *
  * @returns {void}
  */
-function hello() {
+function hello1() {
   console.log('hello!')
 }
 
