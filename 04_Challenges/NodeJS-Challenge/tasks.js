@@ -35,6 +35,7 @@ function startApp(name) {
  */
 function onDataReceived(text) {
 
+
   text = text.replace("\n", "");
   let y = text.split(" ")[0];
   let x = text.split(" ")[1];
@@ -61,6 +62,9 @@ function onDataReceived(text) {
 
     }
 
+  }
+  else if (text === 'list') {
+    list()
   }
 
   else {
@@ -111,11 +115,19 @@ function quit() {
   console.log('Quitting now, goodbye!')
   process.exit();
 }
+
+
+function list() {
+  var array = ['1-buy bread\n', '2-do the exercises\n', '3-clean the house\n']
+  console.log(array[0] + array[1] + array[2])
+}
 /*  Gives the list of the commands*/
 
 function help() {
-  console.log('..........\n' + 'list of commands:\n' + 'hello\n' +  'hello ..(name)..\n' + 'quit\n' + 'exit\n' + 'help\n' + '..........')
+  console.log('..........\n' + 'list of commands:\n' + 'hello\n' + 'hello ..(name)..\n' + 'quit\n' + 'exit\n' + 'help\n' + '..........')
 }
+
+
 
 
 // The following line starts the application
