@@ -33,12 +33,23 @@ function startApp(name) {
  * @param  {string} text data typed by the user
  * @returns {void}
  */
+var tasks = [];
+var text = [];
+
+
+
+
 function onDataReceived(text) {
 
 
   text = text.replace("\n", "");
   let y = text.split(" ")[0];
-  let x = text.split(" ")[1];
+  var x = text.split(" ")[1];
+  var z =text.slice(3);
+
+
+
+
 
 
 
@@ -65,6 +76,15 @@ function onDataReceived(text) {
   }
   else if (text === 'list') {
     list()
+  }
+  else if (y === 'add') {
+    if (x === undefined) {
+      console.log("error");
+    }
+    else {
+      add(z);
+    }
+
   }
 
   else {
@@ -117,17 +137,33 @@ function quit() {
 }
 
 
+var tasks = [];
+tasks.push('buy bread\n');
+tasks.push('do the exercises\n');
+
 function list() {
-  var array = ['1-buy bread\n', '2-do the exercises\n', '3-clean the house\n']
-  console.log(array[0] + array[1] + array[2])
+
+  for (let i = 0; i < tasks.length; i++) {
+    console.log("task:" + (i + 1) + "-" + " " + tasks[i] + '\n');
+  }
 }
+
+
 /*  Gives the list of the commands*/
 
 function help() {
   console.log('..........\n' + 'list of commands:\n' + 'hello\n' + 'hello ..(name)..\n' + 'quit\n' + 'exit\n' + 'help\n' + '..........')
 }
 
+function add(z) {
+  
 
+
+  tasks.push(z);
+  console.log(`add ${z} to the tasks list`)
+
+
+}
 
 
 // The following line starts the application
