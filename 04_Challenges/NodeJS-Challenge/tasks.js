@@ -114,6 +114,8 @@ function onDataReceived(text) {
 
 
   }
+
+  
   
 
   else {
@@ -167,9 +169,9 @@ function quit() {
 
 
 var tasks = [];
-tasks.push('buy bread\n');
-tasks.push('do the exercises\n');
-tasks.push('clean the house\n');
+tasks.push('[ ]  buy bread\n');
+tasks.push('[ ] do the exercises\n');
+tasks.push('[✓] clean the house\n');
 
 function list() {
 
@@ -188,7 +190,7 @@ function help() {
 /*  Add command to  the list of the commands*/
 function add(z) {
   
-  tasks.push(z);
+  tasks.push(`[ ] ${z}`);
   console.log(`add ${z} to the tasks list`)
 
 
@@ -206,9 +208,9 @@ function remove1(){
 }
 
 function remove2(){
-  
+  tasks[1]='';
 
-  console.log(tasks.slice(1,1))
+  console.log(tasks)
   
 }
 
