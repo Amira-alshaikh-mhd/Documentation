@@ -199,7 +199,7 @@ function list() {
 /*  Gives the list of  the commands*/
 
 function help() {
-  console.log('..........\n' + 'list of commands:\n' + 'hello\n' + 'hello ..(name)..\n' + 'quit\n' + 'exit\n' + 'help\n' + 'add ...\n' +'remove\n' +'remove 1\n'+'remove 2\n' + '..........')
+  console.log('..........\n' + 'list of commands:\n\n' + 'hello\n' + 'hello ..(name)..\n' + 'quit\n' + 'exit\n' + 'help\n' + 'add ...\n' +'remove\n' +'remove 1\n'+'remove 2\n'+'check 1\n' +'uncheck 1\n' + '..........')
 }
 
 /*  Add command to  the list of the commands*/
