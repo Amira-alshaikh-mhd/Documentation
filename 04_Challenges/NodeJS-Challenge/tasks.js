@@ -86,6 +86,18 @@ function onDataReceived(text) {
     }
 
   }
+  else if (y ==='remove'){
+    if (x === undefined){
+      remove()
+    }
+    else if(x === "1"){
+      remove1()
+    }
+    else{
+      remove2()
+    }
+
+  }
 
   else {
     unknownCommand(text);
@@ -140,6 +152,7 @@ function quit() {
 var tasks = [];
 tasks.push('buy bread\n');
 tasks.push('do the exercises\n');
+tasks.push('clean the house\n');
 
 function list() {
 
@@ -149,20 +162,37 @@ function list() {
 }
 
 
-/*  Gives the list of the commands*/
+/*  Gives the list of  the commands*/
 
 function help() {
   console.log('..........\n' + 'list of commands:\n' + 'hello\n' + 'hello ..(name)..\n' + 'quit\n' + 'exit\n' + 'help\n' + '..........')
 }
 
+/*  Add command to  the list of the commands*/
 function add(z) {
   
-
-
   tasks.push(z);
   console.log(`add ${z} to the tasks list`)
 
 
+}
+function remove(){
+
+  console.log(tasks.slice(-3, -1))
+  
+}
+
+function remove1(){
+
+  console.log(tasks.slice(-2))
+  
+}
+
+function remove2(){
+  
+
+  console.log(tasks.slice(1,1))
+  
 }
 
 
