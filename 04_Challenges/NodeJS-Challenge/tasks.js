@@ -101,6 +101,20 @@ function onDataReceived(text) {
     }
 
   }
+  else if (y === 'edit'){
+    if (x === undefined){
+    console.log("error")
+    }
+    else if (x === "new"){
+     new1()
+    }
+    else {
+      new2()
+    }
+
+
+  }
+  
 
   else {
     unknownCommand(text);
@@ -196,6 +210,18 @@ function remove2(){
 
   console.log(tasks.slice(1,1))
   
+}
+
+function new1() {
+
+  tasks[2]="new text"
+  console.log(tasks)
+}
+
+function new2(){
+  tasks[0]="new text"
+  console.log(tasks)
+
 }
 
 
