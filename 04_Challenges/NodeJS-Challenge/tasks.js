@@ -93,8 +93,11 @@ function onDataReceived(text) {
     else if(x === "1"){
       remove1()
     }
-    else{
+    else if(x === "2"){
       remove2()
+    }
+    else{
+      console.log("you enter a number that does not exist")
     }
 
   }
