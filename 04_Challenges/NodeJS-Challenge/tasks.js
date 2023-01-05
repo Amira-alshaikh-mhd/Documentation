@@ -114,8 +114,23 @@ function onDataReceived(text) {
 
 
   }
+  else if(y === 'check'){
+    if(x === undefined){
+    console.log(' error')
+    }
+    else if(x === '1'){
+      check()
+    }
+  }
 
-  
+  else if(y === 'uncheck'){
+    if(x === undefined){
+      console.log('error')
+    }
+    else if(x === '1'){
+      uncheck()
+    }
+  }
   
 
   else {
@@ -224,6 +239,17 @@ function new2(){
   tasks[0]="new text"
   console.log(tasks)
 
+}
+
+function check(){
+  tasks[0]="[✓] buy bread"
+  console.log(tasks)
+
+}
+
+function uncheck(){
+   tasks[0]="[ ] buy bread"
+   console.log(tasks)
 }
 
 
