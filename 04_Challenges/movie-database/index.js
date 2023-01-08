@@ -134,15 +134,19 @@ app.get('/movies/read/id/:id', (req, res) => {
 
 
 // update command
-app.get('/movies/update', (req, res) => {
-    res.send("update")
 
-});
-// delete command
-app.get('/movies/delete', (req, res) => {
-    res.send("delete")
-
-});
+app.get('/movies/update/:id', (req, res) => {
+    const id = req.params.id;
+    const { title, year, rating } = req.query;
+  
+    const movie = movies.find(movie => movie.id == id);
+  
+    if (title) movie.title = title;
+    if (year) movie.year = year;
+    if (rating) movie.rating = rating;
+  
+    res.send(movies);
+  });
 
 
 
