@@ -150,7 +150,7 @@ app.get('/movies/delete', (req, res) => {
 
 
 
-
+// add command
 
 app.get('/movies/add', (req, res) => {
     const { id, title, year, rating } = req.query
@@ -173,6 +173,25 @@ app.get('/movies/add', (req, res) => {
     res.send(movies);
 })
 
+
+// delete command
+
+app.get('/movies/delete/:id', (req, res) => {
+    const id = req.params.id;
+
+    const movie = movies.find((movie) => movie.id === Number(id));
+
+    if (!movie) {
+
+        res.status(404)
+        res.send(`The movie ${id} does not exist`)
+    }
+
+    else {
+    movies.splice(id - 1, 1);
+    res.send(movies);
+}
+})
 
 
 
